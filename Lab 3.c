@@ -1,10 +1,19 @@
 // Write a C program to find ceiling and floor value of a variable or expression
 
 #include<stdio.h>
-#include<math.h>
-
-int main(){
-  float a=5.4;
-  printf("The floor value of %f is %0.2f.\n",a,floor(a));
-  printf("The celi value of %f is %0.2f.\n",a,ceil(a));
+void isCeilling(float x){
+	if(x>=0) 	printf("The ceiling value=%d",(int)(x+1));
+	else      printf("The ceiling value=%d",(int)(x));
 }
+void isFloor(float y){
+	if(y>=0)	printf("\nThe floor value=%d",(int)(y));
+	else      printf("\nThe floor value=%d",(int)(y-1));
+}
+int main(){
+	float i;
+	printf("Enter any float value:");
+	scanf("%f",&i);
+	isCeilling(i);
+	isFloor(i);
+	return 0;
+} 
