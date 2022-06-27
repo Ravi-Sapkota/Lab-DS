@@ -1,17 +1,17 @@
 // Write a C program to find validity of arguments by using truth table
+ 
+#include <stdio.h>
+#include <stdlib.h>
 
-// #include<stdio.h>
-
-// int fact(int x){
-//   if(x>1){
-//     return x*fact(x-1);
-//   }else{
-//     return 1;
-//   }
-// }
-
-// int main(){
-//   int x=5;
-//   printf("The factorial of %d is %d",x,fact(x));
-//   return 0;
-// } 
+int main(){
+    int p,q;
+    puts("p\tq\tp^q\tq^p");
+    for(p=0;p<2;p++)
+        for(q=0;q<2;q++){
+            printf("%d\t%d\t %d \t %d\n",p,q,p&&q,q&&p);
+            if(p&&q != q&&p) puts("Not Valid"), exit(1);
+        }
+    puts("Hence, the statement is valid");
+    
+    return 0;
+}
