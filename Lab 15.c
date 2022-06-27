@@ -1,1 +1,1 @@
-// WAP to verify De-Morgan's Law.
+// Write a C program to print truth table of BIDIRECTIONAL Operation
