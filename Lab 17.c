@@ -1,23 +1,17 @@
 // Write a C program to print truth table for tautology and contradiction operations
 
-//#include<stdio.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-//int fibonacchi(int first,int second,int position){
-//  static int third;
-//  third = first+second;
-//  first=second;
-//  second=third;
-//  --position;
-//  if(position==0){
-//    return third;
-//  }else{
-//      return fibonacchi(first, second, position);
-//  }
-//}
-
-//int main(){
-//  // series is 0 1 1 2 3 5 8 13 21 34 55 
-//  int position = 10;
-//  printf("The %dth fibonacchi number is %d.",position, fibonacchi(0, 1, position-2));
-//  return 0;
-//}
+int main(){
+    int p,q;
+    puts("p\tq\tp^q\tq^p");
+    for(p=0;p<2;p++)
+        for(q=0;q<2;q++){
+            printf("%d\t%d\t %d \t %d\n",p,q,p&&q,q&&p);
+            if(p&&q != q&&p) puts("Not Valid"), exit(1);
+        }
+    puts("Hence, the statement is valid");
+    
+    return 0;
+}
