@@ -35,15 +35,13 @@ void UNION(){
   for(i=0;i<A;i++){ temp[k++]=set_A[i]; }   //add A to new array
   for(i=0;i<B;i++){ temp[k++]=set_B[i]; }   //add B to new array
   int flag;
-  for(i=0;i<k;i++){                         //sort array
-      for(j=0;j<k-1;j++){
+  for(i=0;i<k;i++)                         //sort array
+      for(j=0;j<k-1;j++)
           if(temp[j]>temp[j+1]){
             flag=temp[j];
             temp[j]=temp[j+1];
             temp[j+1]=flag;
           }
-      }
-  }
   int duplicates=0;
   for(i=0;i<k;i++) { if(temp[i]==temp[i+1]) duplicates++; } //find number of duplicates
   for(i=0;i<k;i++)                         //remove duplicates
