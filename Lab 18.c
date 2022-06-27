@@ -5,6 +5,8 @@
 int value(int base, int power){
   if(power>1){
     return base*value(base,--power);
+  }else if(power==0){
+      return 1;
   }else{
     return base;
   }
@@ -12,7 +14,7 @@ int value(int base, int power){
 
 int main(){
   int a=3;
-  int n=5;
+  int n=0;
   printf("The value of %d^%d is %d.",a,n,value(a,n));
   return 0;
 }
