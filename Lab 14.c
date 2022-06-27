@@ -1,1 +1,1 @@
-// WAP to implement biconditional operation
+// Write a C program to print truth table of IMPLICATION Operation
