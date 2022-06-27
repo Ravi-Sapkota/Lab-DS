@@ -1,24 +1,23 @@
 // Write a C program to implement modular exponentiation algorithm (computing b^n mod m)
 
-#include<stdio.h>
+#include <stdio.h>
 
-int modularExponentiation(int b,int n,int M){
-	int i,x,power,d;
-	x=1;
-	power=b%M;
-	while(n>0){
-		d=n%2;
-		if(d==1)
-			x=(x*power)%M;
-		power=(power*power)%M;
-		n=n/2;
-	}
-	return x;
+int exponentMod(int a, int n, int m){
+    if(a==0) return 0;
+    if(n==0) return 1;
+    long int y;
+    if(n%2 == 0){
+        y = exponentMod(a,n/2,m);
+        y=(y*y)%m;
+    }else{
+        y=a%m;
+        y=(y*exponentMod(a,n-1,m)%m)%m;
+    }
+    return (int)((y+m)%m);
 }
 
-int main(){
-	int b,n,M,r;
-	b=10,n=1,M=5;
-	r=modularExponentiation(b,n,M);
-	printf("%d^%d mod %d = %d" ,b,n,M,r);
+int main() {
+    int a=2, n=10,m=7;
+    printf("%d^%d mod %d = %d",a,n,m,exponentMod(2,10,7));
+    return 0;
 }
