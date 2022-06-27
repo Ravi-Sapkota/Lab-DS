@@ -4,7 +4,7 @@
 
 int value(int base, int power){
   if(power>1){
-    return base*power(base,--power);
+    return base*value(base,--power);
   }else{
     return base;
   }
