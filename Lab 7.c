@@ -7,6 +7,16 @@ void swap(int *a, int *b){
   *a=*b;
   *b=temp;
 }
+
+int PRIME(int a, int b){
+    int count=b;
+    while(count>0){
+        if(a%count==0 && b%count==0)    break;
+        --count;
+    }
+    return count;
+}
+
 int GCD(int a,int b){
   int r;
   while(b>0){
@@ -24,6 +34,8 @@ int main(){
   if(b>a){
     swap(&a,&b);
   }
+  int lcm=PRIME(a,b);
   int gcd=GCD(a,b);
-  printf("The gcd of %d and %d is %d.",a,b,gcd);
+  printf("The gcd of %d and %d from Euclidian Algorithm is %d.\n",a,b,gcd);
+  printf("The gcd of %d and %d from Prime Factorization is %d.\n",a,b,lcm);
 }
