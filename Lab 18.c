@@ -1,4 +1,4 @@
-//WAP to compute the x^n number using a recursive function.
+//WAP to compute the a^n number using a recursion.
 
 #include<stdio.h>
 
@@ -11,8 +11,8 @@ int value(int base, int power){
 }
 
 int main(){
-  int base=3;
-  int power=5;
-  printf("The value of %d^%d is %d.",base,power,value(base,power));
+  int a=3;
+  int n=5;
+  printf("The value of %d^%d is %d.",a,n,value(a,n));
   return 0;
 }
