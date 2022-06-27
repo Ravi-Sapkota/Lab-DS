@@ -1,1 +1,1 @@
-//WAP to implement conjunction operation.
+// Write a C program to print truth table of AND Operation
