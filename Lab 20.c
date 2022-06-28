@@ -1,5 +1,4 @@
 // Write a program to implement linear search using recursion
-
 #include <stdio.h>
 int RecursiveLS(int arr[], int value, int index, int n){
     int pos = 0;
@@ -7,7 +6,6 @@ int RecursiveLS(int arr[], int value, int index, int n){
         return 0;
     }else if (arr[index] == value){
         pos = index + 1;
-        return pos;
     }else{
         return RecursiveLS(arr, value, index+1, n);
     }
@@ -15,14 +13,8 @@ int RecursiveLS(int arr[], int value, int index, int n){
 }
  
 int main(){
-    int n, value, pos, m = 0, arr[100];
-    printf("Enter the total elements in the array  ");
-    scanf("%d", &n);
- 
-    printf("Enter the array elements\n");
-    for (int i = 0; i < n; i++){
-        scanf("%d", &arr[i]);
-    }
+    int n=10, value, pos;
+    int arr[]={0,1,2,3,4,5,6,7,8,9};
  
     printf("Enter the element to search  ");
     scanf("%d", &value);
