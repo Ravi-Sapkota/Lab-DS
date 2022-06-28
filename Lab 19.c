@@ -18,6 +18,6 @@ int exponentMod(int a, int n, int m){
 
 int main() {
     int a=2, n=10,m=7;
-    printf("%d^%d mod %d = %d",a,n,m,exponentMod(2,10,7));
+    printf("%d^%d mod %d = %d",a,n,m,exponentMod(a,n,m));
     return 0;
 }
